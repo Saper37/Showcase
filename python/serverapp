@@ -1,0 +1,6 @@
+# syntax=docker/dockerfile:1
+FROM python:3
+RUN python -m pip install requests && python -m pip install cryptography && python -m pip install pynacl
+ENV HOSTIP=hostip HOSTPORT=hostport TARGETIP=targetip TARGETPORT=targetport ISHTTP=ishttp
+COPY handler.py myhandler.py myexceptions.py myinterpreter.py main.py netnode.py nodesecret serverfile ./
+CMD python3 main.py

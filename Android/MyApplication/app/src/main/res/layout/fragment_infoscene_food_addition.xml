@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_infoscene_food_addition"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/addition_food_text_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/name"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_text_cost"
+        app:layout_constraintEnd_toStartOf="@+id/addition_food_textfield_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/addition_food_text_cost"
+        android:text="@string/addition_food_text_cost"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_text_calore"
+        app:layout_constraintEnd_toStartOf="@id/addition_food_textfield_cost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_text_name" />
+
+    <EditText
+        android:id="@+id/addition_food_textfield_cost"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_textfield_calore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/addition_food_text_cost"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_textfield_name" />
+
+    <TextView
+        android:id="@+id/addition_food_text_calore"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/calore_text"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_text_carbo"
+        app:layout_constraintEnd_toStartOf="@+id/addition_food_textfield_calore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_text_cost" />
+
+    <TextView
+        android:id="@+id/addition_food_text_carbo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/carbohydarate_text"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_text_sugar"
+        app:layout_constraintEnd_toStartOf="@+id/addition_food_textfield_carbo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_text_calore" />
+
+    <TextView
+        android:id="@+id/addition_food_text_sugar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/sugar_text"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_text_non_sfat"
+        app:layout_constraintEnd_toStartOf="@+id/addition_food_textfield_sugar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_text_carbo" />
+
+    <TextView
+        android:id="@+id/addition_food_text_non_sfat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/non_sfat_text"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_text_sfat"
+        app:layout_constraintEnd_toStartOf="@+id/addition_food_textfield_non_sfat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_text_sugar" />
+
+    <TextView
+        android:id="@+id/addition_food_text_sfat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/sfat_text"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_text_fiber"
+        app:layout_constraintEnd_toStartOf="@+id/addition_food_textfield_sfat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_text_non_sfat" />
+
+    <TextView
+        android:id="@+id/addition_food_text_fiber"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/fiber_text"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_text_proteine"
+        app:layout_constraintEnd_toStartOf="@+id/addition_food_textfield_fiber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_text_sfat" />
+
+    <TextView
+        android:id="@+id/addition_food_text_proteine"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/proteine_text"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_text_salt"
+        app:layout_constraintEnd_toStartOf="@+id/addition_food_textfield_proteine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_text_fiber" />
+
+    <TextView
+        android:id="@+id/addition_food_text_salt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/salt_text"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_return_button"
+        app:layout_constraintEnd_toStartOf="@+id/addition_food_textfield_salt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_text_proteine" />
+
+    <Button
+        android:id="@+id/addition_food_return_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/addition_food_return_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addition_food_add_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_text_salt" />
+
+    <EditText
+        android:id="@+id/addition_food_textfield_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_textfield_cost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addition_food_text_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addition_food_textfield_calore"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/calore_text"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_textfield_carbo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addition_food_text_calore"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_textfield_cost" />
+
+    <EditText
+        android:id="@+id/addition_food_textfield_carbo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:autofillHints=""
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_textfield_sugar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addition_food_text_carbo"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_textfield_calore" />
+
+    <EditText
+        android:id="@+id/addition_food_textfield_sugar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_textfield_non_sfat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addition_food_text_sugar"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_textfield_carbo" />
+
+    <EditText
+        android:id="@+id/addition_food_textfield_non_sfat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_textfield_sfat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addition_food_text_non_sfat"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_textfield_sugar" />
+
+    <EditText
+        android:id="@+id/addition_food_textfield_sfat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_textfield_fiber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addition_food_text_sfat"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_textfield_non_sfat" />
+
+    <EditText
+        android:id="@+id/addition_food_textfield_fiber"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_textfield_proteine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addition_food_text_fiber"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_textfield_sfat" />
+
+    <EditText
+        android:id="@+id/addition_food_textfield_proteine"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_textfield_salt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addition_food_text_proteine"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_textfield_fiber" />
+
+    <EditText
+        android:id="@+id/addition_food_textfield_salt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/addition_food_add_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addition_food_text_salt"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_textfield_proteine" />
+
+    <Button
+        android:id="@+id/addition_food_add_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/addition_food_add_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addition_food_return_button"
+        app:layout_constraintTop_toBottomOf="@+id/addition_food_textfield_salt" />
+</androidx.constraintlayout.widget.ConstraintLayout>

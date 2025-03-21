@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_infoscene"
+    android:tag = "info_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoScene">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".InfoScene">
+
+        <TextView
+            android:id="@+id/info_mode_text"
+            android:layout_width="115dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginBottom="60dp"
+            android:text="@string/info_mode_text"
+            app:layout_constraintBottom_toTopOf="@+id/mealrecyclerview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mealrecyclerview"
+            android:layout_width="332dp"
+            android:layout_height="552dp"
+            android:layout_marginStart="61dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="19dp"
+            android:tooltipText="hello meal"
+            app:layout_constraintBottom_toTopOf="@+id/info_mode_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+
+            tools:listitem="@layout/recyclerview_item" />
+
+        <Button
+            android:id="@+id/info_mode_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="mode"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/info_return_button"
+            app:layout_constraintStart_toEndOf="@+id/info_add_button"
+            app:layout_constraintTop_toBottomOf="@+id/mealrecyclerview" />
+
+        <Button
+            android:id="@+id/info_return_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/info_return"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/info_mode_button"
+            app:layout_constraintTop_toBottomOf="@+id/mealrecyclerview" />
+
+        <Button
+            android:id="@+id/info_add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/info_adding"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/info_mode_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mealrecyclerview" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

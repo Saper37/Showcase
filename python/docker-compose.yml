@@ -1,0 +1,188 @@
+name: myapp
+
+
+
+services:
+    client:
+        image: client
+        build:
+            context: .
+            dockerfile: ./clientapp
+            secrets:
+                - clientsecret
+                - nodesecret
+        #command: python nettest.py client
+        environment:
+            serverip: ""
+            serverport: ""
+            clientip: client
+            clientport: "8080"
+            targetip: middle
+            targetport: "8081"
+            ishttp: false
+            addressfamily: "AF_INET"
+            connectiontype: "SOCK_STREAM"
+            endcode: $ENCODE
+            
+        #volumes:
+        #    - client_vol: /log
+        ports:
+            - "8080:8080"
+        networks: 
+            - testnetwork
+        #env_file:
+        #    - client_config.txt
+        #    - required: true
+            
+        restart: no
+
+    middle:
+        image: middle
+
+        build:
+            context: .
+            dockerfile: ./middleapp
+            secrets:
+            - middlesecret
+            - nodesecret
+
+        environment: 
+            serverip: middle
+            serverport: "8081"
+            clientip: middle
+            clientport: "8082"
+            targetip: middle_last
+            targetport: "8083"
+            ishttp: false
+            addressfamily: "AF_INET"
+            connectiontype: "SOCK_STREAM"
+
+        #volumes:
+        #    - middle_vol: /log
+
+        ports: 
+            - "8081:8081"
+            - "8082:8082"
+        #expose:
+        #    - "81"
+        networks: 
+            - testnetwork
+        #env_file:
+        #    - middle_config.txt
+        #    - required: true
+             
+        restart: no
+
+    middle_last:
+        image: middle_last
+
+        build: 
+            context: .
+            dockerfile: ./middleapp
+            secrets:
+                - middlesecret
+                - nodesecret
+
+        environment:
+            serverip: middle_last
+            serverport: "8083"
+            clientip: middle_last
+            clientport: "8084"
+            targetip: server
+            targetport: "8085"
+            ishttp: false
+            addressfamily: "AF_INET"
+            connectiontype: "SOCK_STREAM"
+        ports:
+            - "8083:8083"
+            - "8084:8084"
+        
+        networks:
+            - testnetwork
+        restart: no
+
+    server:
+        image: server
+        build:
+            context: .
+            dockerfile: ./serverapp
+            secrets:
+                - serversecret
+                - nodesecret
+                
+        environment:
+            serverip: server
+            serverport: "8085"
+            clientip: ""
+            clientport: ""
+            targetip: ""
+            targetport: ""
+            ishttp: false
+            addressfamily: "AF_INET"
+            connectiontype: "SOCK_STREAM"
+        #volume:
+        #   server_vol: /log
+        ports:
+            - "8085:8085"
+
+        networks: 
+            - testnetwork
+        
+        #env_file:
+        #    - server_config.txt
+        #    - required: true
+             
+        restart: no
+        
+
+networks:
+    testnetwork:
+        driver: bridge
+        ipam:
+           config:
+               - subnet: 172.18.0.0/16
+                 
+secrets:
+    clientsecret:
+        file: ./clientfile
+    middlesecret:
+        file: ./middlefile
+    serversecret:
+        file: ./serverfile
+    nodesecret:
+        file: ./nodesecret
+#volumes:
+#    server_vol:
+#    client_vol:
+#    middle_vol:
+         
+
+#config:
+ #       server_config:
+  #          File: ./server_config
+   #         external: true
+    #    client_config:
+     #       File: ./client_config
+      #      external: true
+       # middle_config:
+        #      File: ./middle_config
+         #     external: true
+
+#ts_server:
+    #   image: ts_server
+    #   build:
+    #        context: .
+    #        dockerfile: ./myapp
+    #    environment:
+    #          serverip: ts_server
+    #          serverport: "8084"
+    #          clientip: ""
+    #          clientport: ""
+    #          targetip: ""
+    #          targetport: ""
+    #          ishttp: false
+    #    ports:
+    #         - "8084:8084"
+    #        networks:
+    #          - testnetwork
+    #    restart: no

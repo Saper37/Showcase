@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainScene">
+
+    <fragment
+        android:id="@+id/caloreScene"
+        android:name="com.example.myapplication.CaloreScene"
+        android:label="fragment_calorescene"
+        tools:layout="@layout/fragment_calorescene" >
+        <action
+            android:id="@+id/action_caloreScene_to_mainScene"
+            app:destination="@id/mainScene" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoScene"
+        android:name="com.example.myapplication.InfoScene"
+        android:label="fragment_infoscene"
+        tools:layout="@layout/fragment_infoscene" >
+        <action
+            android:id="@+id/action_infoScene_to_mainScene"
+            app:destination="@id/mainScene" />
+        <action
+            android:id="@+id/action_infoScene_to_additionFragment2"
+            app:destination="@id/additionFragment2" />
+        <action
+            android:id="@+id/action_infoScene_to_additionMealFragment"
+            app:destination="@id/additionMealFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectionScene"
+        android:name="com.example.myapplication.SelectionScene"
+        android:label="fragment_selection"
+        tools:layout="@layout/fragment_selection" >
+        <action
+            android:id="@+id/action_selectionScene_to_mainScene"
+            app:destination="@id/mainScene" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScene"
+        android:name="com.example.myapplication.MainScene"
+        android:label="MainScene" >
+        <action
+            android:id="@+id/action_mainScene_to_caloreScene"
+            app:destination="@id/caloreScene" />
+        <action
+            android:id="@+id/action_mainScene_to_infoScene"
+            app:destination="@id/infoScene" />
+        <action
+            android:id="@+id/action_mainScene_to_selectionScene"
+            app:destination="@id/selectionScene" />
+    </fragment><action android:id="@+id/action_global_infoScene" app:destination="@id/infoScene"/>
+    <fragment
+        android:id="@+id/additionFragment2"
+        android:name="com.example.myapplication.AdditionFoodFragment"
+        android:label="AdditionFragment" >
+        <action
+            android:id="@+id/action_additionFragment2_to_infoScene"
+            app:destination="@id/infoScene" />
+        <argument
+            android:name="mode"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/additionMealFragment"
+        android:name="com.example.myapplication.AdditionMealFragment"
+        android:label="AdditionMealFragment" >
+        <action
+            android:id="@+id/action_additionMealFragment_to_infoScene"
+            app:destination="@id/infoScene" />
+    </fragment>
+</navigation>

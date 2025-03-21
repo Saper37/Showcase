@@ -1,0 +1,7 @@
+type server
+host 192.18.0.0-8081
+http False
+type client
+host 192.18.0.0-8081
+target 192.18.0.0-8082
+http False

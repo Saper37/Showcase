@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="calculate_height">Calculate height</string>
+    <string name="calculate_weight">Calculate weight</string>
+    <string name="bmi_string">Calculate bmi</string>
+    <string name="add_meal">Add meal</string>
+
+    <string name="meal_name">Meal Name</string>
+    <string name="meal_cost_name">Cost</string>
+    <string name="meal_macro_name">Macro</string>
+
+    <string name="food_name">Food Name</string>
+    <string name="food_cost_name">Cost</string>
+    <string name="food_macro_name">Macro</string>
+
+    <string name="add_food">Add Food</string>
+
+    <string name="infoReturnButton">Go back</string>
+    <string name="infoSelectButton">Go back</string>
+    <string name="infoButton_text">info</string>
+    <string name="caloreButton_text">calore\n</string>
+    <string name="calore_view">Calore View</string>
+    <string name="calore_return">Return</string>
+    <string name="selection_button_text">selection</string>
+    <string name="selection_view">Selection View</string>
+    <string name="info_title_text">select</string>
+    <string name="info_select">select</string>
+    <string name="info_return">return</string>
+    <string name="info_view">Info View</string>
+    <string name="info_adding">Add </string>
+    <string name="main_scene">mainscene</string>
+    <string name="selection_return_button">return button</string>
+    <string name="carbohydarate_text">Carbohydrate</string>
+    <string name="calore_text">Calore</string>
+    <string name="non_sfat_text">non-saturated fat</string>
+    <string name="sugar_text">sugar</string>
+    <string name="sfat_text">saturated fat</string>
+    <string name="fiber_text">fiber</string>
+    <string name="proteine_text">proteine</string>
+    <string name="salt_text">salt</string>
+    <string name="addition_return_button">return</string>
+    <string name="addition_add_button">add</string>
+
+    <string name="addition_meal_name_text">Meal name</string>
+    <string name="addition_food_text_cost">Cost</string>
+    <string name="addition_meal_return_button">return</string>
+    <string name="addition_meal_add_button">add</string>
+    <string name="addition_meal_add_food_button">add food</string>
+
+
+    <string name="calore">Calore</string>
+    <string name="name">name</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="addition_food_return_button">Back</string>
+    <string name="addition_food_add_button">Add</string>
+    <string name="string_addition_food_text_cost">Cost</string>
+    <string name="info_mode_text">meal mode</string>
+
+</resources>

@@ -1,0 +1,26 @@
+syntax = "proto3";
+option java_package = "com.android4you.protodatastorel";
+option java_multiple_files = true;
+
+message FoodPreference{
+  int32 id = 1;
+  string name = 2;
+  float cost = 3;
+  int32 mealnumber = 4;
+  map<string, float> macros = 5;
+}
+
+
+message MealPreference{
+  int32 id = 1;
+  string name = 2;
+  int32 mealnumber = 3;
+  repeated FoodPreference foods = 4;
+
+}
+
+message FoodAlgoPreference{
+  repeated MealPreference meals = 1;
+}
+
+

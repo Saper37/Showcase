@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:anroid="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_selectionscene"
+    android:tag="selection_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:context=".SelectionScene"
+    tools:visibility="visible">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:id="@+id/selectiontext"
+        android:text="@string/selection_view">
+    </TextView>
+
+    <Button
+        android:id="@+id/selection_returnbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selection_return_button">
+
+    </Button>
+
+</FrameLayout>
