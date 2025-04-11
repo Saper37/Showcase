@@ -1,0 +1,39 @@
+*** Settings *** 
+Documentation A test suite with a single test for valid login
+
+Library OperatingSystem
+Resource login.resource
+
+*** Variables ***
+${MESSAGE} "Hello, you"
+
+*** Test Cases *** 
+
+Basic Test
+    Input number
+    Input character
+    Open a file
+
+*** Tasks ***
+
+    Basic Tasks
+        Read a file
+        Validate 
+
+*** Keywords ***
+Keywords
+    [ Arguments ] ${path}
+    File Should Exits ${path}
+
+
+    .. code:: robotframework
+    .. code:: python
+       def example( ):
+            return "hello" 
+
+
+// Pipeline example
+
+| *** Settings *** |
+| Documentation    | example
+| Library          | OperatingSystem

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" binding="early" xmlns:qt="http://www.qt.io/2015/02/scxml-ext" name="TestStateChart" qt:editorversion="15.0.1" initial="Initiated">
+    <qt:editorinfo initialGeometry="194.30;141.31;-20;-20;40;40"/>
+    <final id="Final_1">
+        <qt:editorinfo geometry="762.66;150.66;-20;-20;40;40" scenegeometry="762.66;150.66;742.66;130.66;40;40"/>
+    </final>
+    <state id="Initiated">
+        <qt:editorinfo geometry="385.49;157.93;-60;-50;120;100" scenegeometry="385.49;157.93;325.49;107.93;120;100"/>
+        <transition type="external" event="create  " target="GUI created">
+            <qt:editorinfo endTargetFactors="9.51;41.94"/>
+        </transition>
+    </state>
+    <state id="GUI created">
+        <qt:editorinfo geometry="557.97;157.93;-60;-50;120;100" scenegeometry="557.97;157.93;497.97;107.93;120;100"/>
+        <transition type="external" event="Exit" target="Final_1">
+            <qt:editorinfo endTargetFactors="20.31;46.29"/>
+            <if/>
+        </transition>
+    </state>
+    <history type="shallow" id="History_1">
+        <qt:editorinfo geometry="557.97;246.25;-20;-20;40;40" scenegeometry="557.97;246.25;537.97;226.25;40;40"/>
+    </history>
+    <history type="shallow" id="History_2">
+        <qt:editorinfo geometry="385.49;246.25;-20;-20;40;40" scenegeometry="385.49;246.25;365.49;226.25;40;40"/>
+    </history>
+</scxml>

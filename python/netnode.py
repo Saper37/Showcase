@@ -87,7 +87,7 @@ class NetNode:
             clientsocket = socket.socket( addressfamily, connectiontype  )
             #clientsocket.settimeout( timeout )
             clientsocket.bind( ( clientinfo[ 0 ], int( clientinfo[ 1 ] ) ) )
-
+            print( f"clientsocket {targetinfo} )
             try:
                 clientsocket.connect( ( targetinfo[ 0 ], int( targetinfo[ 1 ] ) ) )
             except ( OSError, ConnectionRefusedError ):

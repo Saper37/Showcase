@@ -47,8 +47,7 @@ internal class InfoScene(  ) : Fragment( R.layout.fragment_infoscene ) {
         var backButton: Button = view.findViewById( R.id.info_return_button )
         var modeButton: Button = view.findViewById( R.id.info_mode_button )
         var addButton: Button = view.findViewById( R.id.info_add_button )
-        
-        var modeText: TextView = view.findViewById( R.id.info_mode_text )
+
 
         val navController = Navigation.findNavController( view )
         val mealrecyclerView = view.findViewById<RecyclerView>( R.id.mealrecyclerview )
@@ -79,12 +78,12 @@ internal class InfoScene(  ) : Fragment( R.layout.fragment_infoscene ) {
         modeButton.setOnClickListener{
             if( mode == "food") {
                 mode = "meal"
-                modeText.text = "meal mode"
+                modeButton.setText( "food mode " )
                 mealrecyclerView.adapter = mealAdapter
             }
             else if ( mode == "meal" ) {
                 mode = "food"
-                modeText.text = "food mode"
+                modeButton.setText( "meal mode" )
                 mealrecyclerView.adapter = foodAdapter
             }
             else

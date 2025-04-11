@@ -14,68 +14,167 @@
         android:layout_height="match_parent"
         tools:context=".InfoScene">
 
-        <TextView
-            android:id="@+id/info_mode_text"
-            android:layout_width="115dp"
-            android:layout_height="39dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="27dp"
-            android:layout_marginBottom="60dp"
-            android:text="@string/info_mode_text"
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
             app:layout_constraintBottom_toTopOf="@+id/mealrecyclerview"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tablerow_text_calore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tablerow_text_calore" />
+
+                <TextView
+                    android:id="@+id/tablerow_text_carbo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tablerow_text_carbo" />
+
+                <TextView
+                    android:id="@+id/tablerow_text_sugar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tablerow_text_sugar" />
+
+                <TextView
+                    android:id="@+id/tablerow_text_nsfat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tablerow_text_nsfat" />
+
+                <TextView
+                    android:id="@+id/tablerow_text_sfat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tablerow_text_sfat" />
+
+                <TextView
+                    android:id="@+id/tablerow_text_fiber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tablerow_text_fiber" />
+
+                <TextView
+                    android:id="@+id/tablerow_text_proteine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tablerow_text_proteine" />
+
+                <TextView
+                    android:id="@+id/tablerow_text_salt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tablerow_text_salt" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tablerow_amount_calore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tablerow_amount_calore" />
+
+                <TextView
+                    android:id="@+id/tablerow_amount_carbo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tablerow_amount_carbo" />
+
+                <TextView
+                    android:id="@+id/tablerow_amount_sugar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tablerow_amount_sugar" />
+
+                <TextView
+                    android:id="@+id/tablerow_amount_nsfat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tablerow_amount_nsfat" />
+
+                <TextView
+                    android:id="@+id/tablerow_amount_sfat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tablerow_amount_sfat" />
+
+                <TextView
+                    android:id="@+id/tablerow_amount_fiber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tablerow_amount_fiber" />
+
+                <TextView
+                    android:id="@+id/tablerow_amount_proteine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tablerow_amount_proteine" />
+
+                <TextView
+                    android:id="@+id/tablerow_amount_salt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tablerow_amount_salt" />
+            </TableRow>
+        </TableLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/mealrecyclerview"
-            android:layout_width="332dp"
-            android:layout_height="552dp"
-            android:layout_marginStart="61dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="18dp"
-            android:layout_marginBottom="19dp"
-            android:tooltipText="hello meal"
-            app:layout_constraintBottom_toTopOf="@+id/info_mode_button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
 
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/info_add_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:listitem="@layout/recyclerview_item" />
 
         <Button
             android:id="@+id/info_mode_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginStart="163dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="4dp"
             android:text="mode"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/info_return_button"
-            app:layout_constraintStart_toEndOf="@+id/info_add_button"
-            app:layout_constraintTop_toBottomOf="@+id/mealrecyclerview" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/info_return_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
             android:text="@string/info_return"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/info_mode_button"
-            app:layout_constraintTop_toBottomOf="@+id/mealrecyclerview" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <Button
             android:id="@+id/info_add_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
+            android:layout_marginStart="16dp"
             android:text="@string/info_adding"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/info_mode_button"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mealrecyclerview" />
+            app:layout_constraintTop_toBottomOf="@+id/mealrecyclerview"
+            app:layout_constraintVertical_bias="0.948" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -72,29 +72,43 @@ class AppFoodListAdapter : ListAdapter<Food, AppFoodListAdapter.AppFoodViewHolde
         return AppFoodViewHolder.create(parent)
     }
 
-    override fun onBindViewHolder(holder: AppFoodViewHolder, position: Int) {
+    override fun onBindViewHolder( holder: AppFoodViewHolder, position: Int) {
         val current = getItem(position)
-        var ( id, name, cost, macros ) = current
-        var foodName = name + " | " + cost + " | " + macros.ToString()
-        holder.bind( name )
-        holder.bind( cost.toString() )
-
-
-
+        //var ( id, name, cost, macros ) = current
+        //var foodName = name + " | " + cost + " | " + macros.ToString()
+        holder.bind( current )
     }
 
     class AppFoodViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val foodItemView: TextView = itemView.findViewById(R.id.recycler_view_textView)
         private val checkItemView: CheckBox = itemView.findViewById( R.id.add_meal_item_checkbox )
-        private val caloreView: EditText = itemView.findViewById( R.id.recycerview_item_text_calore )
-        private val carboView: EditText = itemView.findViewById( R.id.recycerview_item_text_carbohydrate )
-        private val sugarView: EditText = itemView.findViewById( R.id.recycerview_item_text_sugar )
-        private val nsatfView: EditText = itemView.findViewById( R.id.recycerview_item_text_nonsaturatedfat )
-        private val satfView: EditText = itemView.findViewById( R.id.recycerview_item_text_saturatedfat )
+        private val caloreInfoView: TextView = itemView.findViewById( R.id.add_food_information_calore )
+        private val carboInfoView: TextView = itemView.findViewById( R.id.add_food_information_carbo )
+        private val sugarInfoView: TextView = itemView.findViewById( R.id.add_food_information_sugar )
+        private val nsfatInfoView: TextView = itemView.findViewById( R.id.add_food_information_nsfat )
+        private val sfatinfoView: TextView = itemView.findViewById( R.id.add_food_information_sfat )
+        private val fiberinfoView: TextView = itemView.findViewById( R.id.add_food_information_fiber )
+        private val proteineinfoView: TextView = itemView.findViewById( R.id.add_food_information_proteine )
+        private val saltinfoView: TextView = itemView.findViewById( R.id.add_food_information_salt )
 
-        fun bind(text: String?) {
-            foodItemView.text = text
-            checkItemView.isChecked = false
+
+
+        fun bind(food: Food?) {
+            if ( food != null ){
+                foodItemView.text = food.name
+                checkItemView.isChecked = false
+                var macro: Macros = food.macros
+                caloreInfoView.setText( macro.calore.toString( ) )
+                carboInfoView.setText( macro.carbohydrate.toString( ) )
+                sugarInfoView.setText( macro.sugar.toString( ) )
+                nsfatInfoView.setText( macro.nonsaturatedFat.toString( ) )
+                sfatinfoView.setText( macro.saturatedFat.toString( ) )
+                fiberinfoView.setText( macro.fiber.toString( ) )
+                proteineinfoView.setText( macro.proteine.toString( ) )
+                saltinfoView.setText( macro.salt.toString( ) )
+
+            }
+
         }
 
         companion object {

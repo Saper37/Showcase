@@ -7,222 +7,70 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-    <TextView
-        android:id="@+id/recycler_view_textView"
+    <TableLayout
+        android:id="@+id/recycler_view_tablelayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginBottom="700dp"
-        android:background="@android:color/holo_orange_light"
+        android:layout_marginBottom="400dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:id="@+id/add_meal_item_checkbox"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="370dp"
-        android:layout_marginBottom="700dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/recycerview_item_textlayout_calore"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginEnd="250dp"
-        android:layout_marginBottom="700dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/recycerview_item_text_calore"
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-        </EditText>
-    </com.google.android.material.textfield.TextInputLayout>
+            <CheckBox
+                android:id="@+id/add_meal_item_checkbox"
+                />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/recycerview_item_textlayout_carbohydrate"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginEnd="220dp"
-        android:layout_marginBottom="700dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/recycler_view_textView"
+                android:background="@android:color/holo_orange_light" />
 
-        <EditText
-            android:id="@+id/recycerview_item_text_carbohydrate"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/add_food_information_calore"
 
-        </EditText>
+                android:background="@android:color/holo_blue_light" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/add_food_information_carbo"
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/recycerview_item_textlayout_sugar"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginEnd="180dp"
-        android:layout_marginBottom="700dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+                android:background="@android:color/holo_blue_light" />
 
-        <EditText
-            android:id="@+id/recycerview_item_text_sugar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            <TextView
+                android:id="@+id/add_food_information_sugar"
 
-        </EditText>
+                android:background="@android:color/holo_blue_light" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/add_food_information_nsfat"
 
-    <com.google.android.material.textfield.TextInputLayout
-    android:id="@+id/recycerview_item_textlayout_nonsaturatedfat"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:layout_marginStart="240dp"
-    android:layout_marginEnd="140dp"
-    android:layout_marginBottom="700dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="1.0"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="1.0">
+                android:background="@android:color/holo_blue_light" />
 
-    <EditText
-        android:id="@+id/recycerview_item_text_nonsaturatedfat"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+            <TextView
+                android:id="@+id/add_food_information_sfat"
 
-    </EditText>
-    </com.google.android.material.textfield.TextInputLayout>
+                android:background="@android:color/holo_blue_light" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/recycerview_item_textlayout_saturatedfat"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="700dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+            <TextView
+                android:id="@+id/add_food_information_fiber"
 
-        <EditText
-            android:id="@+id/recycerview_item_text_saturatedfat"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+                android:background="@android:color/holo_blue_light" />
 
-        </EditText>
-    </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/add_food_information_proteine"
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/recycerview_item_textlayout_fiber"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="320dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="700dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+                android:background="@android:color/holo_blue_light" />
 
-        <EditText
-            android:id="@+id/recycerview_item_text_fiber"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            <TextView
+                android:id="@+id/add_food_information_salt"
 
-        </EditText>
-    </com.google.android.material.textfield.TextInputLayout>
+                android:background="@android:color/holo_blue_light" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/recycerview_item_textlayout_proteine"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="350dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="700dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        </TableRow>
 
-        <EditText
-            android:id="@+id/recycerview_item_text_proteine"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-
-        </EditText>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/recycerview_item_textlayout_salt"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="390dp"
-        android:layout_marginBottom="700dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
-
-        <EditText
-            android:id="@+id/recycerview_item_text_salt"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-
-        </EditText>
-    </com.google.android.material.textfield.TextInputLayout>
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

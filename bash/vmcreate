@@ -1,0 +1,7 @@
+#! /bin/bash
+# $1 = Name of the VM
+# S2 = OS type
+VBoxManage createvm --name=$1 --ostype=$2 --register
+VBoxManage modifyvm $1 --nested-hw-virt=on --memory=5000 --pae=off --longmode=off
+VBoxManage modifyvm --graphicscontroller=vmsga --vram=128
+VBoxManage modifyvm --audio=pulse

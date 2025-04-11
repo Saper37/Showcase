@@ -68,5 +68,21 @@
     <string name="addition_food_add_button">Add</string>
     <string name="string_addition_food_text_cost">Cost</string>
     <string name="info_mode_text">meal mode</string>
+    <string name="tablerow_text_calore">calore</string>
+    <string name="tablerow_text_carbo">carbohydrate</string>
+    <string name="tablerow_text_sugar">sugar</string>
+    <string name="tablerow_text_nsfat">nsfat</string>
+    <string name="tablerow_text_sfat">sfat</string>
+    <string name="tablerow_text_fiber">fiber</string>
+    <string name="tablerow_text_proteine">proteine</string>
+    <string name="tablerow_text_salt">salt</string>
+    <string name="tablerow_amount_calore">0</string>
+    <string name="tablerow_amount_carbo">0</string>
+    <string name="tablerow_amount_sugar">0</string>
+    <string name="tablerow_amount_nsfat">0</string>
+    <string name="tablerow_amount_sfat">0</string>
+    <string name="tablerow_amount_fiber">0</string>
+    <string name="tablerow_amount_proteine">0</string>
+    <string name="tablerow_amount_salt">0</string>
 
 </resources>

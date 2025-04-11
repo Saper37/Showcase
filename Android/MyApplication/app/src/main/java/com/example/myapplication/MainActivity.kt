@@ -42,7 +42,7 @@ class VisibilityInfo: ViewModel(  ){
     }
 }
 
-class MyApplication : Application() {
+class MyApplication : Application( ) {
     // No need to cancel this scope as it'll be torn down with the process
     val applicationScope = CoroutineScope(SupervisorJob())
 
@@ -55,7 +55,7 @@ class MyApplication : Application() {
 }
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity( ) {
 
     private val mealActivityRequestCode = 1
     private val foodActivityRequestCode = 10
